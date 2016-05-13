@@ -6,7 +6,9 @@ for ele in $kernels
 do
     if [ $count -lt $counts ];then
         # keep the last newest kernel and remove others
-        sudo apt-get --purge remove $ele
+        #sudo apt-get --purge remove $ele
+        echo $ele
+        #sudo dpkg -P linux-image-extra-3.13.0-70-generic
         count=$(expr $count + 1)
     else
         break
